@@ -1,3 +1,38 @@
+@font-face {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url("../webfonts/fa-regular-400.woff2") format("woff2"),
+		url("../webfonts/fa-regular-400.ttf") format("truetype");
+}
+
+.far,
+.fa-regular {
+	font-family: "Font Awesome 6 Free";
+	font-weight: 400;
+}
+
+@media screen and (max-device-width: 480px) {
+	header {
+		display: flex;
+		flex-direction: column;
+	}
+	#logo {
+		text-align: center;
+	}
+	nav {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		padding: 10px 60px 10px 60px;
+	}
+
+	.navigation:hover {
+		border-bottom: 3px solid #0065fc;
+	}
+}
+
 body {
 	font-family: "Raleway", "Georgia", "sans-serif";
 	max-width: 1200px;
@@ -6,6 +41,8 @@ body {
 }
 
 header {
+	display: flex;
+	justify-content: space-between;
 }
 
 h1 {
@@ -25,24 +62,30 @@ p {
 	font-size: x-small;
 }
 
-.navigation {
+nav {
 	display: flex;
-	justify-content: flex-end;
 	border: 3px #f2f2f2 solid;
 }
-.navigation p {
-	padding: 60px;
+
+.navigation {
+	display: flex;
+	padding: 60px 60px 10px 60px;
 }
 
-.navigation p:hover {
-	border-top: 3px solid blue;
-	color: blue;
+.navigation:hover {
+	border-top: 3px solid #0065fc;
+	color: #0065fc;
 }
 
-.localisation {
+.recherche {
 	display: flex;
 	border: 3px #f2f2f2 solid;
 	border-radius: 5px;
+}
+
+.bouton_recherche {
+	background-color: #0065fc;
+	color: white;
 }
 
 .filtres {
