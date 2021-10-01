@@ -13,11 +13,11 @@
 	<body>
 		<header>
 			<div id="logo">
-				<img src="images/logo/Booki.png" alt="logo"/>
+				<img src="images/logo/Booki.png" alt="logo Booki"/>
 			</div>
 			<nav>
-				<div class="navigation">Hébergements</div>
-				<div class="navigation">Activités</div>
+				<div class="navigation"><a href="#hébergements"title="Voir les hébergements">Hébergements</a></div>
+				<div class="navigation"><a href="#activités" title="Voir les activités">Activités</a></div>
 			</nav>
 		</header>
 
@@ -27,10 +27,13 @@
 		</section>
 
 		<section class="recherche">
-			<i class="far fa-map-marker-alt"></i>
+			<div class="marker"><i class="far fa-map-marker-alt"></i></div>
 			
-			<h2> Marseille, France</h2>
-			<div class="bouton_recherche">Rechercher</div>
+			<form method="" action="">
+				<input  type="text"name="ville" id="ville" value="Marseille, France" autofocus/>
+				<input type="submit"  class="submit" value="Rechercher"/>
+			</form>
+			
 		</section>
 
 		<section class="filtres">
@@ -52,13 +55,13 @@
 			</div>
 		</section>
 
-		<section class="hebergements">
+		<section id="hébergements" class="hebergements">
 			<div class="hebergements_marseille">
 				<h1>Hébergements à Marseille</h1>
 				<div class="vignettes_hebergements">
 					<div class="vignette_1">
 						<div class="photo_1">
-								<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"/>
+								<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"alt="Hôtel La cannebière"/>
 						</div>
 				
 						<div class="descriptif_1">
@@ -69,7 +72,7 @@
 					</div>
 					<div class="vignette_1">
 						<div class="photo_1">
-							<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"/>
+							<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"alt="Hôtel du port"/>
 						</div>
 						
 						<div class="descriptif_1">
@@ -80,7 +83,7 @@
 					</div>
 					<div class="vignette_1">
 						<div class="photo_1">
-							<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"/>
+							<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"alt="Hôtel Les mouettes"/>
 						</div>
 						
 						<div class="descriptif_1">
@@ -91,7 +94,7 @@
 					</div>
 					<div class="vignette_1">
 						<div class="photo_1">
-							<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"/>
+							<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"alt="Hôtel de la mer"/>
 						</div>		
 						
 						<div class="descriptif_1">
@@ -102,7 +105,7 @@
 					</div>
 					<div class="vignette_1">
 						<div class="photo_1">
-							<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"/>
+							<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"alt="Auberge Le Panier"/>
 						</div>
 						
 						<div class="descriptif_1">
@@ -113,7 +116,7 @@
 					</div>
 					<div class="vignette_1">
 						<div class="photo_1">
-							<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"/>
+							<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"alt="Hotel Chez Amina"/>
 						</div>
 						
 						<div class="descriptif_1">
@@ -129,11 +132,93 @@
 
 			<div class="populaires">
 				<h1>Les plus populaires</h1>
+				<div class="vignettes_populaires">
+					<div class="vignette_2">
+						<div class="photo_2">
+								<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"alt="Hôtel Le soleil du matin"/>
+						</div>
+				
+						<div class="descriptif_2">
+							<h3>Hôtel Le soleil du matin</h3>
+							<p>Nuit à partir de <em>128 €</em></p>
+							<p>****</p>
+						</div>
+					</div>
+					<div class="vignette_2">
+						<div class="photo_2">
+								<img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"alt="Chambres d'hôtes Au coeur de l'eau"/>
+						</div>
+				
+						<div class="descriptif_2">
+							<h3>Au coeur de l'eau <br/>Chambres d'hôtes</h3>
+							<p>Nuit à partir de <em>71 €</em></p>
+							<p>****</p>
+						</div>
+					</div>
+					<div class="vignette_2">
+						<div class="photo_2">
+								<img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"alt="Hôtel tout bleu et blanc"/>
+						</div>
+				
+						<div class="descriptif_2">
+							<h3>"Hôtel tout bleu et blanc"</h3>
+							<p>Nuit à partir de <em>68 €</em></p>
+							<p>****</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="activites">
+		<section id="activités" class="activites">
 			<h1>Activités à Marseille</h1>
+			<div class="vignettes_activites">
+				<div class="colonne1">
+					<div class="vignette_3">
+						<div class="photo_3">
+							<img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"alt="vieux port marseille"/>
+						</div>
+						<h3>Vieux Port</h3>
+					</div>
+				</div>
+				<div class="colonne2">
+					<div class="vignette_4">
+						<div class="photo_4">
+							<img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"alt="Fort de Pomègues"/>
+						</div>
+						<h3>Fort de Pomègues</h3>
+					</div>
+					<div class="vignette_4">
+						<div class="photo_4">
+							<img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"alt="Iles du Frioul"/>
+						</div>
+						<h3>Iles du Frioul</h3>
+					</div>
+				</div>
+				<div class="colonne1">
+					<div class="vignette_3">
+						<div class="photo_3">
+							<img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"alt="Parc des Calanques"/>
+						</div>
+						<h3>Parc National des Calanques</h3>
+					</div>
+				</div>
+				<div class="colonne2">
+					<div class="vignette_4">
+						<div class="photo_4">
+							<img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"alt="Notre-Dame-de-la-Garde"/>
+						</div>
+						<h3>Notre-Dame-de-la-Garde</h3>
+					</div>
+					<div class="vignette_4">
+						<div class="photo_4">
+							<img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"alt="Parc Longchamp"/>
+						</div>
+						<h3>Parc Longchamp</h3>
+					</div>
+				</div>
+			</div>
+
 		</section>
 
 		<footer>
