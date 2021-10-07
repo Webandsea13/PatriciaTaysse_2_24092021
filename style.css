@@ -25,39 +25,6 @@
 .grey_star {
 	color: #f2f2f2;
 }
-@media screen and (max-width: 768px) {
-	header {
-		flex-direction: column;
-		padding-right: 0;
-		padding-left: 0;
-	}
-	#logo {
-		text-align: center;
-	}
-	nav {
-		justify-content: center;
-	}
-	.navigation {
-		width: 50%;
-	}
-	.navigation:hover {
-		border-bottom: 3px solid #0065fc;
-		border-top: 0 solid white;
-	}
-	.hebergements {
-		flex-direction: column;
-	}
-	.hebergements_marseille {
-		width: 100px;
-	}
-	.populaires {
-		width: 100%;
-	}
-	.activites {
-		display: flex;
-		flex-direction: column;
-	}
-}
 
 /* @media screen and (min-device-width: 480px) and(max-width:992px) {
 	.hebergements {
@@ -75,18 +42,16 @@ a {
 }
 body {
 	font-family: "Raleway", "Georgia", "sans-serif", "font-awesome";
-	max-width: 1500px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0;
-	margin-bottom: 0;
+	/*max-width: 1800px;*/
+	margin: 0;
 }
 
 header {
 	display: flex;
 	justify-content: space-between;
-	padding-right: 30px;
-	padding-left: 30px;
+	/*padding-right: 30px;
+	padding-left: 30px;*/
+	margin-left: 30px;
 }
 
 h1 {
@@ -123,12 +88,12 @@ nav {
 }
 
 .presentation {
-	padding-right: 30px;
-	padding-left: 30px;
+	margin: 30px;
 }
 .recherche {
 	display: flex;
-	padding: 3px 30px 3px 30px;
+	padding: 3px;
+	margin: 30px;
 	height: 50px;
 	justify-content: flex-start;
 	align-items: center;
@@ -168,7 +133,8 @@ input.submit {
 .filtres {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 3px 30px 3px 30px;
+	padding: 3px;
+	margin: 30px;
 }
 .bouton_filtre1 {
 	display: flex;
@@ -201,13 +167,15 @@ input.submit {
 .dispo {
 	display: flex;
 	align-items: baseline;
-	padding: 3px 30px 3px 30px;
+	padding: 3px;
+	margin: 30px;
 }
 .hebergements {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 3px 30px 3px 30px;
+	padding: 3px;
+	margin: 30px;
 }
 
 .hebergements_marseille {
@@ -224,8 +192,8 @@ input.submit {
 	align-items: stretch;
 }
 .vignette_1 {
-	width: 200px;
-	height: 180px;
+	width: 270px;
+	height: 220px;
 	margin: 6px;
 	padding: 5px;
 	border-radius: 10px;
@@ -233,8 +201,10 @@ input.submit {
 	box-shadow: 6px 6px 10px grey;
 }
 .photo_1 {
-	width: 200px;
-	height: 100px;
+	width: 270px;
+	height: 120px;
+	width: 100%;
+	height: 120 px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	overflow: hidden;
@@ -260,14 +230,15 @@ input.submit {
 .vignettes_populaires {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	height: 90%;
+	justify-content: space-between; /*center;*/
 	align-items: center;
 }
 
 .vignette_2 {
 	display: flex;
-	width: 300px;
-	height: 120px;
+	width: 310px;
+	height: 130px;
 	margin: 6px;
 	padding: 5px;
 	border-radius: 10px;
@@ -275,8 +246,8 @@ input.submit {
 	box-shadow: 6px 6px 10px grey;
 }
 .photo_2 {
-	width: 135px;
-	height: 120px;
+	width: 145px;
+	height: 130px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	overflow: hidden;
@@ -289,10 +260,12 @@ input.submit {
 	object-fit: cover;
 }
 .activites {
-	padding: 3px 30px 30px 30px;
+	padding: 3px;
+	margin: 30px;
 }
 .vignettes_activites {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 12px;
 	margin: 12px;
@@ -303,14 +276,14 @@ input.submit {
 	justify-content: space-between;
 }
 .vignette_3 {
-	width: 250px;
+	width: 260px;
 	height: 400px;
 	border-radius: 5px;
 	box-shadow: 6px 6px 6px #f2f2f2;
 }
 .photo_3 {
-	width: 250px;
-	height: 350px;
+	width: 260px;
+	height: 360px;
 	overflow: hidden;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -321,13 +294,13 @@ input.submit {
 	object-fit: cover;
 }
 .vignette_4 {
-	width: 250px;
+	width: 260px;
 	height: 180px;
 	border-radius: 5px;
 	box-shadow: 6px 6px 6px #f2f2f2;
 }
 .photo_4 {
-	width: 250px;
+	width: 260px;
 	height: 130px;
 	overflow: hidden;
 	border-top-left-radius: 5px;
@@ -355,4 +328,42 @@ footer {
 ul {
 	list-style-type: none;
 	padding-inline-start: 0px;
+	margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		flex-direction: column;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	#logo {
+		text-align: center;
+	}
+	nav {
+		justify-content: center;
+	}
+	.navigation {
+		width: 50%;
+	}
+	.navigation:hover {
+		border-bottom: 3px solid #0065fc;
+		border-top: 0 solid white;
+	}
+	.hebergements {
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: center;
+	}
+	.hebergements_marseille {
+		min-width: 500px;
+	}
+	.populaires {
+		min-width: 500px;
+	}
+	.activites {
+		display: flex;
+		flex-direction: column;
+	}
 }
