@@ -1,13 +1,4 @@
-/*@font-face {
-	font-family: "raleway", "sans-serif", "font-awesome";
-	font-style: normal;
-	font-weight: 400;
-	font-display: block;
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/regular.min.css);
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/solid.min.css);
-	
-}*/
-
+/*police icon*/
 .far,
 .fas,
 .fa-regular,
@@ -25,33 +16,16 @@
 .grey_star {
 	color: #f2f2f2;
 }
-
-/* @media screen and (min-device-width: 480px) and(max-width:992px) {
-	.hebergements {
-		display: flex;
-		flex-direction: column;
-	}
-	.activites {
-		display: flex;
-		flex-direction: column;
-	}
-} */
+/*liens*/
 a {
 	text-decoration: none;
 	color: black;
 }
+/*généralités*/
 body {
 	font-family: "Raleway", "Georgia", "sans-serif", "font-awesome";
 	max-width: 1600px;
 	margin: 0 auto;
-}
-
-header {
-	display: flex;
-	justify-content: space-between;
-	/*padding-right: 30px;
-	padding-left: 30px;*/
-	margin-left: 30px;
 }
 
 h1 {
@@ -70,7 +44,12 @@ h3 {
 p {
 	font-size: x-small;
 }
-
+/*haut de page*/
+header {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 30px;
+}
 nav {
 	display: flex;
 }
@@ -91,6 +70,7 @@ nav {
 .presentation {
 	margin: 30px;
 }
+/*barre de recherche*/
 .recherche {
 	display: flex;
 	padding: 3px;
@@ -106,8 +86,7 @@ nav {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
-form {
-}
+
 input#ville {
 	border: none;
 	font-size: medium;
@@ -116,7 +95,7 @@ input#ville {
 	border-top: 2px solid #f2f2f2;
 	border-bottom: 2px solid #f2f2f2;
 }
-input.submit {
+.submit {
 	background-color: #0065fc;
 	color: white;
 	font-size: medium;
@@ -130,7 +109,7 @@ input.submit {
 	position: relative;
 	left: -3px;
 }
-
+/*boutons filtres*/
 .filtres {
 	display: flex;
 	flex-wrap: wrap;
@@ -148,6 +127,7 @@ input.submit {
 	margin: 10px;
 	border: 2px solid #f2f2f2;
 	border-radius: 50px;
+	cursor: pointer;
 }
 
 .puce_1 {
@@ -171,6 +151,7 @@ input.submit {
 	padding: 3px;
 	margin: 30px;
 }
+/*section vignettes*/
 .hebergements {
 	display: flex;
 	flex-direction: row;
@@ -212,7 +193,10 @@ input.submit {
 	height: 100%;
 	object-fit: cover;
 }
-
+.vignette_1:hover {
+	/*transform: scale(1.05);*/
+	box-shadow: 6px 6px 10px #deebff;
+}
 .populaires {
 	width: 32%;
 	background-color: #f2f2f2;
@@ -242,7 +226,9 @@ input.submit {
 	border-radius: 10px;
 	background-color: white;
 	box-shadow: 6px 6px 10px grey;
+	cursor: pointer;
 }
+
 .photo_2 {
 	width: 45%;
 	height: 150px;
@@ -256,6 +242,10 @@ input.submit {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+.vignette_2:hover {
+	transform: scale(1.05);
+	/*background-color: #deebff;*/
 }
 .activites {
 	padding: 3px;
@@ -282,6 +272,7 @@ input.submit {
 	height: 500px;
 	border-radius: 10px;
 	box-shadow: 6px 6px 6px #f2f2f2;
+	cursor: pointer;
 }
 .photo_3 {
 	width: 100%;
@@ -300,6 +291,7 @@ input.submit {
 	height: 240px;
 	border-radius: 10px;
 	box-shadow: 6px 6px 6px #f2f2f2;
+	cursor: pointer;
 }
 .photo_4 {
 	width: 100%;
@@ -318,6 +310,11 @@ input.submit {
 	height: 100%;
 	object-fit: cover;
 }
+.vignette_3:hover,
+.vignette_4:hover {
+	background-color: #f2f2f2;
+}
+/*bas de page*/
 footer {
 	display: flex;
 	background-color: #f2f2f2;
@@ -332,7 +329,11 @@ ul {
 	padding-inline-start: 0px;
 	margin: 10px;
 }
-@media screen and (min-width: 769px) and(max-width:992px) {
+li a:hover {
+	color: #0065fc;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
 	.hebergements {
 		flex-direction: column-reverse;
 		flex-wrap: wrap;
@@ -340,7 +341,7 @@ ul {
 		align-content: center;
 	}
 	.hebergements_marseille {
-		width: 90%;
+		width: 95%;
 		background-color: white;
 	}
 	.activites {
@@ -350,11 +351,22 @@ ul {
 		width: 45%;
 	}
 	.populaires {
+		width: 95%;
+	}
+	.vignettes_populaires {
+		flex-direction: row;
+	}
+	.vignette_2 {
 		width: 30%;
 	}
-	.activites {
+}
+
+@media screen and (min-width: 769px) {
+	.icon {
+		display: none;
 	}
 }
+
 @media screen and (max-width: 768px) {
 	header {
 		flex-direction: column;
@@ -374,6 +386,15 @@ ul {
 	.navigation:hover {
 		border-bottom: 3px solid #0065fc;
 		border-top: 0 solid white;
+	}
+	input#ville {
+		font-size: small;
+		width: 120px;
+		padding: 8px;
+	}
+
+	.word {
+		display: none;
 	}
 	.hebergements {
 		flex-direction: column-reverse;
