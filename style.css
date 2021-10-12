@@ -4,7 +4,7 @@
 .fa-regular,
 .fa-solid {
 	font-family: "Font-awesome";
-	font-weight: 400;
+	/*font-weight: 400;*/
 }
 
 .bouton_filtre .fas,
@@ -29,7 +29,8 @@ body {
 }
 
 h1 {
-	font-size: larger;
+	font-size: x-large;
+	margin: 15px 0px;
 }
 
 h2 {
@@ -38,11 +39,14 @@ h2 {
 }
 
 h3 {
-	font-size: small;
+	font-size: 15px;
+	margin: 10px 0px;
 }
 
 p {
-	font-size: x-small;
+	font-size: 15px;
+	font-weight: 500;
+	margin: 10px 0px;
 }
 /*haut de page*/
 header {
@@ -68,30 +72,30 @@ nav {
 }
 
 .presentation {
-	margin: 30px;
+	margin: 10px 30px;
 }
 /*barre de recherche*/
 .recherche {
 	display: flex;
 	padding: 3px;
-	margin: 30px;
+	margin: 12px 30px;
 	height: 50px;
 	justify-content: flex-start;
 	align-items: center;
 }
 .marker {
 	background-color: #f2f2f2;
-	padding: 6px 12px;
+	padding: 11px 12px 12px 12px;
 	border: 2px solid #f2f2f2;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 
 input#ville {
 	border: none;
 	font-size: medium;
 	font-weight: bold;
-	padding: 6px 12px;
+	padding: 12px;
 	border-top: 2px solid #f2f2f2;
 	border-bottom: 2px solid #f2f2f2;
 }
@@ -101,9 +105,9 @@ input#ville {
 	font-size: medium;
 	border: none;
 	font-weight: bold;
-	padding: 6px 12px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+	padding: 12px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 	border-top: 2px solid #0065fc;
 	border-bottom: 2px solid #0065fc;
 	position: relative;
@@ -114,7 +118,7 @@ input#ville {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 3px;
-	margin: 30px;
+	margin: 10px 30px;
 }
 .bouton_filtre1 {
 	display: flex;
@@ -131,25 +135,29 @@ input#ville {
 }
 
 .puce_1 {
+	text-align: center;
 	width: 20px;
 	padding: 10px;
 	background-color: #deebff;
 	border-radius: 50%;
+	position: relative;
+	left: -2px;
 }
 .bouton_filtre:hover {
-	transform: scale(1.15);
+	transform: scale(1.05);
 }
 .puce_2 {
-	padding: 8px 14px;
+	padding: 4px 10px;
 	margin-right: 10px;
 	border: 2px solid #f2f2f2;
 	border-radius: 20px;
 }
+
 .dispo {
 	display: flex;
 	align-items: baseline;
 	padding: 3px;
-	margin: 30px;
+	margin: 10px 30px;
 }
 /*section vignettes*/
 .hebergements {
@@ -157,35 +165,36 @@ input#ville {
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 3px;
-	margin: 30px;
+	margin: 10px;
 }
 
 .hebergements_marseille {
-	width: 65%;
+	box-sizing: border-box;
+	width: 70%;
 	background-color: #f2f2f2;
-	padding: 12px;
-	margin: 12px;
-	border-radius: 10px;
+	padding: 12px 40px;
+	margin: 20px;
+	border-radius: 20px;
 }
 .vignettes_hebergements {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 .vignette_1 {
 	width: 30%;
-	height: 210px;
-	margin: 6px;
+	height: 220px;
+	margin-bottom: 30px;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 20px;
 	background-color: white;
-	box-shadow: 6px 6px 10px grey;
+	box-shadow: 6px 6px 10px #d3d3d3;
 }
 .photo_1 {
 	height: 60%;
 	width: 100%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 	overflow: hidden;
 }
 .photo_1 img {
@@ -193,16 +202,19 @@ input#ville {
 	height: 100%;
 	object-fit: cover;
 }
+.descriptif_1 {
+	margin-left: 8px;
+}
 .vignette_1:hover {
-	/*transform: scale(1.05);*/
-	box-shadow: 6px 6px 10px #deebff;
+	transform: scale(1.02);
 }
 .populaires {
-	width: 32%;
+	box-sizing: border-box;
+	width: 30%;
 	background-color: #f2f2f2;
-	padding: 12px;
-	margin: 12px;
-	border-radius: 10px;
+	padding: 12px 40px;
+	margin: 20px;
+	border-radius: 20px;
 }
 .titre_populaires {
 	display: flex;
@@ -219,21 +231,22 @@ input#ville {
 
 .vignette_2 {
 	display: flex;
-	width: 80%;
-	height: 150px;
+	width: 100%;
+	height: 155px;
 	margin: 6px;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 20px;
 	background-color: white;
-	box-shadow: 6px 6px 10px grey;
+	box-shadow: 6px 6px 10px #d3d3d3;
 	cursor: pointer;
 }
 
 .photo_2 {
-	width: 45%;
-	height: 150px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+	max-width: 40%;
+	min-width: 40%;
+	height: 155px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 	overflow: hidden;
 	padding-right: 12px;
 }
@@ -243,9 +256,15 @@ input#ville {
 	height: 100%;
 	object-fit: cover;
 }
+.descriptif_2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 5px;
+	padding-right: 50px;
+}
 .vignette_2:hover {
-	transform: scale(1.05);
-	/*background-color: #deebff;*/
+	transform: scale(1.02);
 }
 .activites {
 	padding: 3px;
@@ -257,6 +276,9 @@ input#ville {
 	justify-content: space-between;
 	padding: 12px;
 	margin: 12px;
+}
+.activites h1 {
+	padding-left: 24px;
 }
 .colonne1 {
 	width: 23%;
@@ -270,26 +292,33 @@ input#ville {
 .vignette_3 {
 	width: 100%;
 	height: 500px;
-	border-radius: 10px;
+	border-radius: 20px;
 	box-shadow: 6px 6px 6px #f2f2f2;
 	cursor: pointer;
 }
 .photo_3 {
 	width: 100%;
-	height: 440px;
+	height: 450px;
 	overflow: hidden;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-bottom: 5px;
 }
 .photo_3 img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
+.vignette_3 h3 {
+	padding-left: 10px;
+}
+.vignette_4 h3 {
+	padding-left: 10px;
+}
 .vignette_4 {
 	width: 100%;
 	height: 240px;
-	border-radius: 10px;
+	border-radius: 20px;
 	box-shadow: 6px 6px 6px #f2f2f2;
 	cursor: pointer;
 }
@@ -297,8 +326,9 @@ input#ville {
 	width: 100%;
 	height: 180px;
 	overflow: hidden;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-bottom: 8px;
 }
 .photo_3 img {
 	width: 100%;
@@ -313,6 +343,7 @@ input#ville {
 .vignette_3:hover,
 .vignette_4:hover {
 	background-color: #f2f2f2;
+	transform: scale(1.02);
 }
 /*bas de page*/
 footer {
@@ -321,18 +352,21 @@ footer {
 }
 .liste {
 	padding: 3px;
-	padding-right: 30px;
-	margin: 30px;
+	padding-right: 50px;
+	margin: 30px 50px;
 }
 ul {
 	list-style-type: none;
 	padding-inline-start: 0px;
 	margin: 10px;
 }
+li {
+	padding: 6px 0;
+}
 li a:hover {
 	color: #0065fc;
 }
-
+/*format tablettes*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
 	.hebergements {
 		flex-direction: column-reverse;
@@ -366,7 +400,7 @@ li a:hover {
 		display: none;
 	}
 }
-
+/*format telephone portable*/
 @media screen and (max-width: 768px) {
 	header {
 		flex-direction: column;
@@ -395,6 +429,10 @@ li a:hover {
 
 	.word {
 		display: none;
+	}
+	.submit {
+		border-radius: 10px;
+		left: -6px;
 	}
 	.hebergements {
 		flex-direction: column-reverse;
