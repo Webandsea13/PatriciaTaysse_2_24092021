@@ -39,14 +39,14 @@ h2 {
 }
 
 h3 {
-	font-size: 15px;
-	margin: 10px 0px;
+	font-size: 17px;
+	margin: 10px 0 0 0;
 }
 
 p {
 	font-size: 15px;
 	font-weight: 500;
-	margin: 10px 0px;
+	margin: 5px 0;
 }
 /*haut de page*/
 header {
@@ -61,7 +61,8 @@ nav {
 .navigation {
 	display: flex;
 	padding: 60px 60px 10px 60px;
-	border-top: 3px solid white;
+	border: 3px solid white;
+	/*border-bottom: 3px, solid white;*/
 }
 
 .navigation:hover {
@@ -173,6 +174,7 @@ input#ville {
 	width: 70%;
 	background-color: #f2f2f2;
 	padding: 12px 40px;
+	padding-top: 24px;
 	margin: 20px;
 	border-radius: 20px;
 }
@@ -182,7 +184,9 @@ input#ville {
 	justify-content: space-between;
 }
 .vignette_1 {
+	box-sizing: border-box;
 	width: 30%;
+	min-width: 220px;
 	height: 220px;
 	margin-bottom: 30px;
 	padding: 5px;
@@ -203,7 +207,8 @@ input#ville {
 	object-fit: cover;
 }
 .descriptif_1 {
-	margin-left: 8px;
+	padding-left: 8px;
+	padding-bottom: 8px;
 }
 .vignette_1:hover {
 	transform: scale(1.02);
@@ -211,8 +216,9 @@ input#ville {
 .populaires {
 	box-sizing: border-box;
 	width: 30%;
+	min-width: 260px;
 	background-color: #f2f2f2;
-	padding: 12px 40px;
+	padding: 24px 40px;
 	margin: 20px;
 	border-radius: 20px;
 }
@@ -232,6 +238,7 @@ input#ville {
 .vignette_2 {
 	display: flex;
 	width: 100%;
+	min-width: 300px;
 	height: 155px;
 	margin: 6px;
 	padding: 5px;
@@ -242,13 +249,13 @@ input#ville {
 }
 
 .photo_2 {
-	max-width: 40%;
-	min-width: 40%;
+	max-width: 35%;
+	min-width: 35%;
 	height: 155px;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	overflow: hidden;
-	padding-right: 12px;
+	padding-right: 16px;
 }
 
 .photo_2 img {
@@ -261,7 +268,7 @@ input#ville {
 	flex-direction: column;
 	justify-content: space-between;
 	padding-bottom: 5px;
-	padding-right: 50px;
+	padding-right: 40px;
 }
 .vignette_2:hover {
 	transform: scale(1.02);
@@ -385,6 +392,7 @@ li a:hover {
 		width: 45%;
 	}
 	.populaires {
+		padding: 24px 10px;
 		width: 95%;
 	}
 	.vignettes_populaires {
@@ -392,6 +400,7 @@ li a:hover {
 	}
 	.vignette_2 {
 		width: 30%;
+		min-width: 250px;
 	}
 }
 
@@ -419,7 +428,7 @@ li a:hover {
 	}
 	.navigation:hover {
 		border-bottom: 3px solid #0065fc;
-		border-top: 0 solid white;
+		border-top: 3px solid white;
 	}
 	input#ville {
 		font-size: small;
