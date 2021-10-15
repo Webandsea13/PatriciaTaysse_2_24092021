@@ -231,8 +231,9 @@ input#ville {
 	display: flex;
 	flex-direction: column;
 	height: 90%;
-	justify-content: space-between; /*center;*/
+	justify-content: space-around;
 	align-items: center;
+	margin: auto;
 }
 
 .vignette_2 {
@@ -285,7 +286,7 @@ input#ville {
 	margin: 12px;
 }
 .activites h1 {
-	padding-left: 24px;
+	padding-left: 30px;
 }
 .colonne1 {
 	width: 23%;
@@ -374,7 +375,7 @@ li a:hover {
 	color: #0065fc;
 }
 
-/*format petits écrans*/
+/*format petits écrans ordinateur*/
 @media screen and (min-width: 993px) and (max-width: 1230px) {
 	.hebergements_marseille {
 		width: 65%;
@@ -408,6 +409,7 @@ li a:hover {
 	}
 	.vignette_1 {
 		width: 45%;
+		box-shadow: 6px 6px 10px #f2f2f2;
 	}
 	.populaires {
 		padding: 24px 10px;
@@ -459,10 +461,13 @@ li a:hover {
 		border-bottom: 3px solid #0065fc;
 		border-top: 3px solid white;
 	}
+	.marker {
+		padding: 10px 12px 12px 12px;
+	}
 	input#ville {
 		font-size: small;
 		width: 120px;
-		padding: 8px;
+		padding: 13px;
 	}
 
 	.word {
@@ -471,41 +476,66 @@ li a:hover {
 	.submit {
 		border-radius: 10px;
 		left: -6px;
+		padding: 11px 12px;
 	}
 	.hebergements {
 		flex-direction: column-reverse;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-content: center;
+		margin: 0;
+		padding: 0;
 	}
 	.hebergements_marseille {
-		width: 90%;
+		width: 100%;
 		background-color: white;
-		padding: 20px 20px;
+		padding: 10px;
+		margin: 0;
+	}
+	.hebergements_marseille h1 {
+		padding-left: 30px;
 	}
 	.vignettes_hebergements {
-		justify-content: space-between;
-		align-items: center;
+		justify-content: center;
 	}
 	.vignette_1 {
-		width: 100%;
-		margin: 10px;
+		width: 90%;
+		height: 240 px;
+		margin: 10px 0;
+		box-shadow: 6px 6px 10px #f2f2f2;
 	}
 	.populaires {
+		width: 100%;
+		margin: 0;
+		padding: 20px;
+		border-radius: 0%;
+	}
+	.titre_populaires {
+		width: 90%;
+		margin: auto;
+	}
+	.vignettes_populaires {
 		width: 90%;
 	}
 	.activites {
 		display: flex;
 		flex-direction: column;
+		margin: 0;
+		padding: 0;
 	}
 	.vignettes_activites {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding: 0;
+		margin: 0;
 	}
-	.colonne1,
+	.colonne1 {
+		width: 85%;
+		margin: 0 10px;
+	}
 	.colonne2 {
-		width: 80%;
+		width: 85%;
 		margin: 10px;
 	}
 	.vignette_3 {
@@ -513,6 +543,9 @@ li a:hover {
 	}
 	.photo_3 {
 		height: 180px;
+	}
+	.vignette_4 {
+		margin: 10px 0;
 	}
 
 	footer {
