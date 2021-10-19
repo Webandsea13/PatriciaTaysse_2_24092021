@@ -1,10 +1,10 @@
 /*police icon*/
+
 .far,
 .fas,
 .fa-regular,
 .fa-solid {
 	font-family: "Font-awesome";
-	/*font-weight: 400;*/
 }
 
 .bouton_filtre .fas,
@@ -54,6 +54,17 @@ header {
 	justify-content: space-between;
 	margin-left: 30px;
 }
+#logo {
+	height: 70px;
+	width: 150px;
+	padding-top: 30px;
+}
+#logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 nav {
 	display: flex;
 }
@@ -67,8 +78,6 @@ nav {
 
 .navigation:hover {
 	border-top: 3px solid #0065fc;
-}
-.navigation a:hover {
 	color: #0065fc;
 }
 
@@ -94,6 +103,7 @@ nav {
 
 input#ville {
 	border: none;
+	font-family: "raleway";
 	font-size: medium;
 	font-weight: bold;
 	padding: 12px;
@@ -105,6 +115,7 @@ input#ville {
 	color: white;
 	font-size: medium;
 	border: none;
+	font-family: "raleway";
 	font-weight: bold;
 	padding: 12px;
 	border-top-right-radius: 10px;
@@ -148,10 +159,10 @@ input#ville {
 	transform: scale(1.05);
 }
 .puce_2 {
-	padding: 4px 10px;
+	padding: 4px 12px;
 	margin-right: 10px;
 	border: 2px solid #f2f2f2;
-	border-radius: 20px;
+	border-radius: 15px;
 }
 
 .dispo {
@@ -450,6 +461,7 @@ li a:hover {
 	}
 	#logo {
 		text-align: center;
+		margin: auto;
 	}
 	nav {
 		justify-content: center;
