@@ -30,12 +30,12 @@ body {
 
 h1 {
 	font-size: x-large;
-	margin: 15px 0px;
+	margin: 0px;
+	margin-bottom: 20px;
 }
 
 h2 {
 	font-size: medium;
-	margin: 10px;
 }
 
 h3 {
@@ -53,6 +53,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	margin-left: 30px;
+	margin-bottom: 30px;
 }
 #logo {
 	height: 70px;
@@ -73,22 +74,20 @@ nav {
 	display: flex;
 	padding: 60px 60px 10px 60px;
 	border: 3px solid white;
-	justify-content: center;
 }
 
 .navigation:hover {
 	border-top: 3px solid #0065fc;
 	color: #0065fc;
 }
-
-.presentation {
+.section_header {
 	margin: 10px 30px;
 }
+
 /*barre de recherche*/
 .recherche {
 	display: flex;
 	padding: 3px;
-	margin: 12px 30px;
 	height: 50px;
 	justify-content: flex-start;
 	align-items: center;
@@ -130,30 +129,36 @@ input#ville {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 3px;
-	margin: 10px 30px;
 }
 .bouton_filtre1 {
 	display: flex;
 	align-items: baseline;
 	margin: 10px;
+	margin-left: 0px;
+	margin-right: 20px;
 }
 .bouton_filtre {
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	margin: 10px;
+	margin-left: 0px;
+	margin-right: 20px;
 	border: 2px solid #f2f2f2;
 	border-radius: 50px;
 	cursor: pointer;
+}
+.texte_filtre {
+	font-weight: bold;
+	margin: 10px;
 }
 
 .puce_1 {
 	text-align: center;
 	width: 20px;
-	padding: 10px;
+	padding: 15px;
 	background-color: #deebff;
 	border-radius: 50%;
-	position: relative;
-	left: -2px;
+	margin: -2px;
 }
 .bouton_filtre:hover {
 	transform: scale(1.05);
@@ -169,37 +174,33 @@ input#ville {
 	display: flex;
 	align-items: baseline;
 	padding: 3px;
-	margin: 10px 30px;
 }
 /*section vignettes*/
 .hebergements {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 3px;
-	margin: 10px;
+	margin: 30px;
+	gap: 30px;
 }
 
 .hebergements_marseille {
 	box-sizing: border-box;
-	width: 70%;
 	background-color: #f2f2f2;
-	padding: 12px 40px;
-	padding-top: 24px;
-	margin: 20px;
+	padding: 30px;
+	flex: 2;
 	border-radius: 20px;
 }
 .vignettes_hebergements {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	gap: 30px;
 }
 .vignette_1 {
 	box-sizing: border-box;
-	width: 30%;
+	flex: 1;
 	min-width: 220px;
 	height: 220px;
-	margin-bottom: 30px;
 	padding: 5px;
 	border-radius: 20px;
 	background-color: white;
@@ -226,11 +227,9 @@ input#ville {
 }
 .populaires {
 	box-sizing: border-box;
-	width: 30%;
-	min-width: 260px;
+	flex: 1;
 	background-color: #f2f2f2;
-	padding: 24px 40px;
-	margin: 20px;
+	padding: 30px;
 	border-radius: 20px;
 }
 .titre_populaires {
@@ -241,18 +240,12 @@ input#ville {
 .vignettes_populaires {
 	display: flex;
 	flex-direction: column;
-	height: 90%;
-	justify-content: space-around;
-	align-items: center;
-	margin: auto;
+	gap: 30px;
 }
 
 .vignette_2 {
 	display: flex;
-	width: 100%;
-	min-width: 290px;
 	height: 155px;
-	margin: 6px;
 	padding: 5px;
 	border-radius: 20px;
 	background-color: white;
@@ -286,19 +279,14 @@ input#ville {
 	transform: scale(1.02);
 }
 .activites {
-	padding: 3px;
 	margin: 30px;
 }
 .vignettes_activites {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 12px;
-	margin: 12px;
 }
-.activites h1 {
-	padding-left: 30px;
-}
+
 .colonne1 {
 	width: 23%;
 }
@@ -371,13 +359,13 @@ footer {
 }
 .liste {
 	padding: 3px;
-	padding-right: 50px;
-	margin: 30px 50px;
+	padding-right: 60px;
+	margin: 30px;
 }
 ul {
 	list-style-type: none;
 	padding-inline-start: 0px;
-	margin: 10px;
+	margin-top: 10px;
 }
 li {
 	padding: 6px 0;
@@ -386,22 +374,6 @@ li a:hover {
 	color: #0065fc;
 }
 
-/*format petits écrans ordinateur*/
-@media screen and (min-width: 993px) and (max-width: 1230px) {
-	.hebergements_marseille {
-		width: 65%;
-	}
-	.populaires {
-		width: 35%;
-	}
-	.vignette_1 {
-		width: 45%;
-	}
-	.vignette_2 {
-		width: 90%;
-		min-width: 240px;
-	}
-}
 /*format tablettes*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
 	.hebergements {
@@ -411,29 +383,20 @@ li a:hover {
 		align-content: center;
 	}
 	.hebergements_marseille {
-		width: 95%;
 		background-color: white;
 		margin: 0;
+		padding: 0;
 	}
-	.activites {
-		width: 90%;
-	}
+
 	.vignette_1 {
-		width: 45%;
 		box-shadow: 6px 6px 10px #f2f2f2;
 	}
-	.populaires {
-		padding: 24px 10px;
-		margin: 20px 5px;
-		width: 95%;
-	}
+
 	.vignettes_populaires {
-		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 	.vignette_2 {
-		width: 40%;
 		min-width: 250px;
 	}
 	.colonne1 {
@@ -446,13 +409,13 @@ li a:hover {
 	}
 }
 /*gestion icon search*/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
 	.icon {
 		display: none;
 	}
 }
 /*format telephone portable*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	header {
 		flex-direction: column;
 		padding-right: 0;
@@ -465,13 +428,21 @@ li a:hover {
 	}
 	nav {
 		justify-content: center;
+		width: 100%;
+		margin: 0;
+	}
+	nav a {
+		width: 100%;
 	}
 	.navigation {
-		width: 50%;
+		justify-content: center;
 	}
 	.navigation:hover {
 		border-bottom: 3px solid #0065fc;
 		border-top: 3px solid white;
+	}
+	.section_header {
+		margin: 20px;
 	}
 	.marker {
 		padding: 10px 12px 12px 12px;
@@ -499,41 +470,36 @@ li a:hover {
 		padding: 0;
 	}
 	.hebergements_marseille {
-		width: 100%;
 		background-color: white;
-		padding: 10px;
-		margin: 0;
+		padding: 0;
+		margin: 20px;
 	}
-	.hebergements_marseille h1 {
-		padding-left: 30px;
-	}
+
 	.vignettes_hebergements {
 		justify-content: center;
+		gap: 20px;
 	}
 	.vignette_1 {
-		width: 90%;
-		height: 240 px;
-		margin: 10px 0;
+		min-width: 260px;
+
 		box-shadow: 6px 6px 10px #f2f2f2;
 	}
 	.populaires {
-		width: 100%;
 		margin: 0;
 		padding: 20px;
 		border-radius: 0%;
 	}
 	.titre_populaires {
-		width: 90%;
 		margin: auto;
 	}
 	.vignettes_populaires {
-		width: 90%;
+		gap: 20px;
 	}
 	.activites {
 		display: flex;
 		flex-direction: column;
 		margin: 0;
-		padding: 0;
+		padding: 20px;
 	}
 	.vignettes_activites {
 		flex-direction: column;
@@ -541,14 +507,15 @@ li a:hover {
 		justify-content: center;
 		padding: 0;
 		margin: 0;
+		gap: 20px;
 	}
 	.colonne1 {
-		width: 85%;
-		margin: 0 10px;
+		width: 100%;
+		gap: 20px;
 	}
 	.colonne2 {
-		width: 85%;
-		margin: 10px;
+		width: 100%;
+		gap: 20px;
 	}
 	.vignette_3 {
 		height: 240px;
@@ -556,14 +523,11 @@ li a:hover {
 	.photo_3 {
 		height: 180px;
 	}
-	.vignette_4 {
-		margin: 10px 0;
-	}
 
 	footer {
 		flex-direction: column;
 	}
 	.liste {
-		margin: 0;
+		margin-left: 20px;
 	}
 }
