@@ -1,12 +1,3 @@
-/*police icon*/
-
-.far,
-.fas,
-.fa-regular,
-.fa-solid {
-	font-family: "Font-awesome";
-}
-
 .bouton_filtre .fas,
 .puce_2 .fas,
 .bluestar .fas,
@@ -124,6 +115,10 @@ input#ville {
 	position: relative;
 	left: -3px;
 }
+.icon {
+	display: none;
+}
+
 /*boutons filtres*/
 .filtres {
 	display: flex;
@@ -250,7 +245,6 @@ input#ville {
 	border-radius: 20px;
 	background-color: white;
 	box-shadow: 6px 6px 10px #d3d3d3;
-	cursor: pointer;
 }
 
 .photo_2 {
@@ -278,6 +272,7 @@ input#ville {
 .vignette_2:hover {
 	transform: scale(1.02);
 }
+
 .activites {
 	margin: 30px;
 }
@@ -301,7 +296,6 @@ input#ville {
 	height: 500px;
 	border-radius: 20px;
 	box-shadow: 6px 6px 6px #f2f2f2;
-	cursor: pointer;
 }
 .photo_3 {
 	width: 100%;
@@ -327,7 +321,6 @@ input#ville {
 	height: 240px;
 	border-radius: 20px;
 	box-shadow: 6px 6px 6px #f2f2f2;
-	cursor: pointer;
 }
 .photo_4 {
 	width: 100%;
@@ -408,12 +401,13 @@ li a:hover {
 		padding-bottom: 25px;
 	}
 }
-/*gestion icon search*/
+/*
 @media screen and (min-width: 767px) {
 	.icon {
 		display: none;
 	}
-}
+}*/
+
 /*format telephone portable*/
 @media screen and (max-width: 767px) {
 	header {
@@ -455,6 +449,9 @@ li a:hover {
 
 	.word {
 		display: none;
+	}
+	.icon {
+		display: inherit;
 	}
 	.submit {
 		border-radius: 10px;
